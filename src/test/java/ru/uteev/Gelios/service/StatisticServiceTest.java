@@ -33,9 +33,6 @@ class StatisticServiceTest {
         list.add(doc2);
         list.add(doc3);
 
-        list
-                .forEach(s -> System.out.println(s.toString()));
-
         return new ArrayList<>(list);
     }
 
@@ -48,6 +45,13 @@ class StatisticServiceTest {
         int resultSum = stat.getSum().compareTo(sumForEquals);
         assertEquals(0, resultSum);
 
+        BigDecimal minForEquals = new BigDecimal("100.1");
+        int resultMin = stat.getMinAmount().compareTo(minForEquals);
+        assertEquals(0, resultMin);
+
+        BigDecimal maxForEquals = new BigDecimal("100.6");
+        int resultMax = stat.getMaxAmount().compareTo(maxForEquals);
+        assertEquals(0, resultMax);
     }
 
 }
