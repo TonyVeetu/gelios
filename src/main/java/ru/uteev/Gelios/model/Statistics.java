@@ -48,4 +48,13 @@ public class Statistics {
         this.sum = sum;
     }
 
+    @Override
+    public String toString() {
+        return "Statistics{" +
+                "count=" + count +
+                ", minAmount=" + minAmount +
+                ", maxAmount=" + maxAmount +
+                ", sum=" + sum +
+                '}';
+    }
 }

@@ -23,7 +23,6 @@ public class StatisticService {
     public Statistics getStatistic(int clientId, int productId) {
         if (documentList != null) {//защита от самого первого запроса для статистики
             List<BigDecimal> bigDecimals = new ArrayList<>();
-            System.out.println("getStatistic = " + clientId + ", " + productId);
             if ((clientId > 0) || (productId > 0)) {//фильтр есть
                 for (Document doc : documentList) {
                     if (doc.getClientId() == clientId && doc.getProductId() == productId) {
